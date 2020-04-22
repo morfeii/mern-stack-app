@@ -1,0 +1,29 @@
+{
+  "name": "mern-stack-app",
+  "version": "1.0.0",
+  "description": "MERN stack app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js"
+  },
+  "keywords": [
+    "mern",
+    "react"
+  ],
+  "author": "Alex Matvieiev <morfeii88@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.9"
+  },
+  "devDependencies": {
+    "@mate-academy/eslint-config": "0.0.12",
+    "@mate-academy/eslint-config-react": "0.0.5",
+    "concurrently": "^5.1.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-node": "^11.1.0",
+    "nodemon": "^2.0.3"
+  }
+}
