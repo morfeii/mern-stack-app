@@ -1,0 +1,6 @@
+{
+  "port": 5000,
+  "jwtSecret": "1234qwerty",
+  "mongoUri": "mongodb://heroku_wvrjl990:J5YF!yxS3m7kJSC@ds211709.mlab.com:11709/heroku_wvrjl990",
+  "baseUrl": "http://localhost:5000"
+}

@@ -5,30 +5,18 @@ export const LinkCard = ({ link }) => {
     <>
       <h2>Link</h2>
 
-      <p>
-        Your link:
-        <a
-          href={link.to}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {link.to}
-        </a>
+      <p className="flow-text">
+        Your link: <a href={link.to} target="_blank"rel="noopener noreferrer">{link.to}</a>
       </p>
-      <p>
-        From:
-        <a
-          href={link.from}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {link.from}
-        </a>
+      <p className="flow-text">
+        From: <a href={link.from} target="_blank"rel="noopener noreferrer">{link.from}</a>
       </p>
-      <p>
+      <p className="flow-text">
         Clicks: <strong>{link.clicks}</strong>
       </p>
-      <p>Date: <strong>{new Date(link.Date).toLocaleDateString()}</strong></p>
+      <p className="flow-text">
+        Date: <strong>{new Date(link.date).toLocaleDateString()}</strong>
+      </p>
     </>
   )
 }
