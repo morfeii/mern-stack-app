@@ -1,5 +1,4 @@
 /* eslint-disable consistent-return */
-/* eslint-disable max-len */
 const { Router } = require('express');
 const config = require('config');
 const bcrypt = require('bcryptjs');
