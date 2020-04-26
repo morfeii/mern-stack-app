@@ -28,7 +28,7 @@ export const LinkCard = ({ link }) => {
       <p>
         Clicks: <strong>{link.clicks}</strong>
       </p>
-      <p>Date: <strong>{new Date(link.date).toLocaleDateString()}</strong></p>
+      <p>Date: <strong>{new Date(link.Date).toLocaleDateString()}</strong></p>
     </>
   )
 }

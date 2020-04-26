@@ -17,7 +17,6 @@ export const DetailPage = () => {
       const fetched = await request(`/api/link/${linkId}`, 'GET', null, {
         Authorization: `Bearer ${token}`
       });
-      console.log(fetched)
       setLink(fetched);
     } catch (error) {}
   }, [token, linkId, request]);
