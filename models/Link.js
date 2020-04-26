@@ -17,7 +17,7 @@ const schema = new Schema({
   },
   date: {
     type: Date,
-    default: Date.now
+    default: Date.now,
   },
   clicks: {
     type: Number,

@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 /* eslint-disable no-param-reassign */
 const jwt = require('jsonwebtoken');
 const config = require('config');
