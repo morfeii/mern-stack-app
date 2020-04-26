@@ -21,7 +21,7 @@ export const useHttp = () => {
       const data = await response.json();
 
       if(!response.ok) {
-        throw new Error(data.message || 'Something wrong...');
+        throw new Error(data.message || 'Oops...Something went wrong.');
       }
 
       setLoading(false);

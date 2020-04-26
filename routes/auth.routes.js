@@ -31,8 +31,8 @@ router.post(
       const { email, password } = req.body;
       const candidate = await User.findOne({ email });
 
-      if (!candidate) {
-        return res.status(400).json({ message: 'Такой пользователь уже существует' });
+      if (candidate) {
+        return res.status(400).json({ message: 'This user already exists!' });
       }
 
       const hashedPassword = await bcrypt.hash(password, 12);
@@ -43,9 +43,9 @@ router.post(
 
       await user.save();
 
-      res.status(201).json({ message: 'User is created' });
+      res.status(201).json({ message: 'User is created.' });
     } catch (e) {
-      res.status(500).json({ message: 'Something Wrong...' });
+      res.status(500).json({ message: 'Oops...Something went wrong.' });
     }
   },
 );
@@ -72,13 +72,13 @@ router.post(
       const user = await User.findOne({ email });
 
       if (!user) {
-        return res.status(400).json({ message: 'Такой пользователь не найден' });
+        return res.status(400).json({ message: 'No such user found.' });
       }
 
       const isMatch = await bcrypt.compare(password, user.password);
 
       if (!isMatch) {
-        return res.status(400).json({ message: 'Wrong password' });
+        return res.status(400).json({ message: 'Wrong password.' });
       }
 
       const token = jwt.sign(
@@ -92,7 +92,7 @@ router.post(
         userId: user.id,
       });
     } catch (e) {
-      res.status(500).json({ message: 'Something Wrong...' });
+      res.status(500).json({ message: 'Oops...Something went wrong.' });
     }
   },
 );
