@@ -61,7 +61,7 @@ export const AuthPage = () => {
               </div>
               <div className="input-field">
                 <input
-                  placeholder="Enter password"
+                  placeholder="Enter password (at least 6 symbols)"
                   id="password"
                   type="password"
                   name="password"
