@@ -1,5 +1,4 @@
 {
-  "port": 5000,
   "jwtSecret": "1234qwerty",
   "mongoUri": "mongodb+srv://sasha:12345@cluster0-vly35.azure.mongodb.net/app?retryWrites=true&w=majority",
   "baseUrl": "http://localhost:5000"
