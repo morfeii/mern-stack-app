@@ -19,19 +19,20 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-// const PORT = config.get('port') || 5000;
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 
 async function start() {
   try {
-    await mongoose.connect(process.env.MONGODB_URI || config.get('mongoUri'), {
+    await mongoose.connect(config.get('mongoUri'), {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true,
     });
+
     mongoose.connection.on('connected', () => {
-      console.log('Mongoose is connectrd!');
+      console.log('Mongoose is connected!');
     });
+
     app.listen(PORT, () => console.log(`App has been started on port ${PORT}`));
   } catch (e) {
     console.log('Server Error', e.message);

@@ -1,0 +1,5 @@
+{
+  "jwtSecret": "1234qwerty",
+  "mongoUri": "mongodb://heroku_0q3knmmz:kbg10ag2pa7tuoe9fc501f4vp2@ds163382.mlab.com:63382/heroku_0q3knmmz",
+  "baseUrl": "https://urlshortedapp.herokuapp.com"
+}
